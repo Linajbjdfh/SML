@@ -48,7 +48,7 @@ if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
     new_df_cat = pd.DataFrame({'JobRole':JobRole,
                 'Gender':Gender}, index=[0])
-    new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
+    #new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
 
     # make a DF for the numericals and standard scale
     new_df_num = pd.DataFrame({'YearsAtCompany': YearsAtCompany, 
