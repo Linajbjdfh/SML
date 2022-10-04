@@ -1,7 +1,7 @@
 
 import pandas as pd
 import pickle # un-pickling stuff from training notebook
-from xgboost import XGBRegressor # we use a trained XGBoost model...and therefore need to load it
+from xgboost import XGBRegressor # we use a trained XGBoost model
 from sklearn.preprocessing import StandardScaler
 import shap # add prediction explainability
 
@@ -11,7 +11,7 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="TesT",
+    page_title="HR",
     page_icon="💸")
 
 st.title('Predict Attrition')
@@ -31,13 +31,10 @@ model_xgb, scaler, ohe, cats, shap_values = read_objects()
 
 with st.expander("What's that app?"):
     st.markdown("""
-    This app will help you determine what you should be asking people to pay per night for staying at your awesome place.
-    We trained an AI on successful places in Copenhagen. It will give you a pricing suggestion given a few inputs.
-    We recommend going around 350kr up or down depending on the amenities that you can provide and the quality of your place.
-    As a little extra 🌟, we added an AI explainer 🤖 to understand factors driving prices up or down.
+    This app will help you determine something
     """)
 
-
+#Creating layout
 JobRole = st.selectbox('Select JobRole', options=ohe.categories_[0])
 Gender = st.radio('WHat is your gender', options=ohe.categories_[1])
 YearsAtCompany = st.number_input('How many years at this company?', min_value=1, max_value=60)
@@ -65,6 +62,6 @@ if st.button('Predict! 🚀'):
     predicted_value = model_xgb.predict(line_to_pred)[0]
 
     #print out result to user
-    st.metric(label="Predicted price", value=f'{round(predicted_value)}')
+    st.metric(label="Predicted price", value=of'{round(predicted_value)}')
     
    
