@@ -56,7 +56,7 @@ if st.button('Predict! 🚀'):
                         'JobSatisfaction':JobSatisfaction, 
                         'NumCompaniesWorked':NumCompaniesWorked 
                         }, index=[0])
-    #new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
+    new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
     #bring all columns together
     #line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
@@ -65,6 +65,6 @@ if st.button('Predict! 🚀'):
     #predicted_value = model_xgb.predict(line_to_pred)[0]
 
     #print out result to user
-    st.metric(label="Predicted price", value=f'{new_df_num.head()} kr')
+    st.metric(label="Predicted price", value=f'{new_values_num.head()} kr')
     
    
