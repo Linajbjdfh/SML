@@ -45,7 +45,7 @@ if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
     new_df_cat = pd.DataFrame({'JobRole':JobRole,
                 'Gender':Gender}, index=[0])
-    #new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
+    new_values_cat = pd.DataFrame(ohe.transform(new_df_cat), columns = cats , index=[0])
     
 
     # make a DF for the numericals and standard scale
@@ -56,8 +56,8 @@ if st.button('Predict! 🚀'):
     new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
     #bring all columns together
-    #line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
-    line_to_pred = pd.concat([new_values_num, new_df_cat], axis=1)
+    line_to_pred = pd.concat([new_values_num, new_values_cat], axis=1)
+    
     #run prediction for 1 new observation
     predicted_value = model_xgb.predict(line_to_pred)[0]
 
