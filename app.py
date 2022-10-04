@@ -65,6 +65,6 @@ if st.button('Predict! 🚀'):
     #predicted_value = model_xgb.predict(line_to_pred)[0]
 
     #print out result to user
-    st.metric(label="Predicted price", value=f'{new_values_num.head()} kr')
+    st.metric(label="Predicted price", value=f'{new_values_num.info()} kr')
     
    
