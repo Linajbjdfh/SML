@@ -53,9 +53,9 @@ if st.button('Predict! 🚀'):
 
     # make a DF for the numericals and standard scale
     #new_df_num = pd.DataFrame({'YearsAtCompany': YearsAtCompany, 
-                        'JobSatisfaction':JobSatisfaction, 
-                        'NumCompaniesWorked':NumCompaniesWorked 
-                        }, index=[0])
+     #                   'JobSatisfaction':JobSatisfaction, 
+     #                   'NumCompaniesWorked':NumCompaniesWorked 
+     #                   }, index=[0])
     #new_values_num = pd.DataFrame(scaler.transform(new_df_num), columns = new_df_num.columns, index=[0])  
     
     #bring all columns together
