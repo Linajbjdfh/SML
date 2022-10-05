@@ -31,7 +31,7 @@ model_xgb, scaler, ohe, cats, shap_values = read_objects()
 
 with st.expander("What's that app?"):
     st.markdown("""
-    This app will help you determine something
+    This app will help you predict attrition of the employee
     """)
 
 #Creating layout
