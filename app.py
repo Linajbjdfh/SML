@@ -43,38 +43,38 @@ NumCompaniesWorked = st.number_input('How many companies you worked at?', min_va
 
 if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
-new_values_cat = pd.DataFrame(columns=['Healthcare Representative','Human Resources','Laboratory Technician','Manager',
+    new_values_cat = pd.DataFrame(columns=['Healthcare Representative','Human Resources','Laboratory Technician','Manager',
                                        'Manufacturing Director','Research Director','Research Scientist','Sales Executive','Sales Representative',
                                        "Male","Female","1","2","3","4","5","6","7","8","9","10","1","2","3","4",
                                        "0","1","2","3","4","5","6","7","8","9"],dtype='object')
 
-new_values_cat['Healthcare Representative'] = 0
-new_values_cat['Human Resources'] = 0
-new_values_cat['Laboratory Technician'] = 0
-new_values_cat['Manager'] = 0
-new_values_cat['Manufacturing Director'] = 0
-new_values_cat['Research Director'] = 0
-new_values_cat['Research Scientist'] = 0
-new_values_cat['Sales Executive'] = 0
-new_values_cat['Sales Representative'] = 0
-new_values_cat['Female'] = 0
-new_values_cat['Male'] = 0
-new_values_cat['1'] = 0
-new_values_cat['2'] = 0
-new_values_cat['3'] = 0
-new_values_cat['4'] = 0
-new_values_cat['5'] = 0
-new_values_cat['6'] = 0
-new_values_cat['7'] = 0
-new_values_cat['8'] = 0
-new_values_cat['9'] = 0
-new_values_cat['10'] = 0
-new_values_cat['0'] = 0
-new_values_cat[JobRole] = 1
-new_values_cat[Gender] = 1
-new_values_cat[YearsAtCompany] = 1
-new_values_cat[JobSatisfaction] = 1
-new_values_cat[NumCompaniesWorked] = 1
+    new_values_cat['Healthcare Representative'] = 0
+    new_values_cat['Human Resources'] = 0
+    new_values_cat['Laboratory Technician'] = 0
+    new_values_cat['Manager'] = 0
+    new_values_cat['Manufacturing Director'] = 0
+    new_values_cat['Research Director'] = 0
+    new_values_cat['Research Scientist'] = 0
+    new_values_cat['Sales Executive'] = 0
+    new_values_cat['Sales Representative'] = 0
+    new_values_cat['Female'] = 0
+    new_values_cat['Male'] = 0
+    new_values_cat['1'] = 0
+    new_values_cat['2'] = 0
+    new_values_cat['3'] = 0
+    new_values_cat['4'] = 0
+    new_values_cat['5'] = 0
+    new_values_cat['6'] = 0
+    new_values_cat['7'] = 0
+    new_values_cat['8'] = 0
+    new_values_cat['9'] = 0
+    new_values_cat['10'] = 0
+    new_values_cat['0'] = 0
+    new_values_cat[JobRole] = 1
+    new_values_cat[Gender] = 1
+    new_values_cat[YearsAtCompany] = 1
+    new_values_cat[JobSatisfaction] = 1
+    new_values_cat[NumCompaniesWorked] = 1
     
 
     # make a DF for the numericals and standard scale
