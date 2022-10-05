@@ -62,7 +62,6 @@ if st.button('Predict! 🚀'):
     
     new_values_cat[JobRole] = 1
     new_values_cat[Gender] = 1
-    new_values_cat[NumCompaniesWorked] = 1
     
 
     # make a DF for the numericals and standard scale
