@@ -62,8 +62,6 @@ if st.button('Predict! 🚀'):
     
     new_values_cat[JobRole] = 1
     new_values_cat[Gender] = 1
-    new_values_cat[YearsAtCompany] = 1
-    new_values_cat[JobSatisfaction] = 1
     new_values_cat[NumCompaniesWorked] = 1
     
 
