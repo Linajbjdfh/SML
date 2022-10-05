@@ -35,11 +35,11 @@ with st.expander("What's that app?"):
     """)
 
 #Creating layout
-JobRole = st.selectbox('Select JobRole', options=ohe.categories_[0])
-Gender = st.radio('WHat is your gender', options=ohe.categories_[1])
+JobRole = st.selectbox('Select your Job Role', options=ohe.categories_[0])
+Gender = st.radio('What is your gender?', options=ohe.categories_[1])
 YearsAtCompany = st.number_input('How many years at this company?', min_value=1, max_value=60)
 JobSatisfaction = st.number_input('Rate your Job satisfaction?', min_value=1, max_value=4)
-NumCompaniesWorked = st.number_input('How many numbers companies you worked at?', min_value=0, max_value=9)
+NumCompaniesWorked = st.number_input('How many companies you worked at?', min_value=0, max_value=9)
 
 if st.button('Predict! 🚀'):
     # make a DF for categories and transform with one-hot-encoder
