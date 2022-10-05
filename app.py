@@ -78,6 +78,6 @@ if st.button('Predict! 🚀'):
     predicted_value = model_xgb.predict(line_to_pred)[0]
 
     #print out result to user
-    st.metric(label="Probability of employee leave the company", value=f'{predicted_value.round(predicted_value, 2)} %')
+    st.metric(label="Probability of employee leave the company", value=f'{predicted_value} %')
     
    
