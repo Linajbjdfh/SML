@@ -28,6 +28,7 @@ def read_objects():
     return model_xgb, scaler, ohe, cats, shap_values
 
 model_xgb, scaler, ohe, cats, shap_values = read_objects()
+st.write(ohe)
 
 with st.expander("What's that app?"):
     st.markdown("""
